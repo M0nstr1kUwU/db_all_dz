@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/AppFast.iml" filepath="$PROJECT_DIR$/.idea/AppFast.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ServerWork.iml" filepath="$PROJECT_DIR$/.idea/ServerWork.iml" />
     </modules>
   </component>
 </project>

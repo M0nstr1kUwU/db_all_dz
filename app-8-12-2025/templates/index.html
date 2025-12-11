@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FastAPI App</title>
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        .form { margin: 20px 0; padding: 20px; border: 1px solid #ccc; }
+        input { margin: 5px; padding: 8px; }
+        button { padding: 8px 15px; background: #007bff; color: white; border: none; cursor: pointer; }
+        .result { margin-top: 20px; padding: 10px; background: #f8f9fa; }
+    </style>
+</head>
+<body>
+    <h1>FastAPI Authentication</h1>
+
+    <div class="form">
+        <h2>Register</h2>
+        <form action="/register" method="post">
+            <input type="text" name="username" placeholder="Username" required><br>
+            <input type="password" name="password" placeholder="Password" required><br>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <div class="form">
+        <h2>Login</h2>
+        <form action="/login" method="post">
+            <input type="text" name="username" placeholder="Username" required><br>
+            <input type="password" name="password" placeholder="Password" required><br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div class="form">
+        <h2>Get Users</h2>
+        <button onclick="getUsers()">Get All Users</button>
+        <div id="usersResult" class="result"></div>
+    </div>
+
+    <div class="form">
+        <h2>Get User by ID</h2>
+        <input type="number" id="userId" placeholder="User ID">
+        <button onclick="getUser()">Get User</button>
+        <div id="userResult" class="result"></div>
+    </div>
+
+    <script>
+        async function getUsers() {
+            const response = await fetch('/users');
+            const data = await response.json();
+            document.getElementById('usersResult').innerHTML = JSON.stringify(data, null, 2);
+        }
+
+        async function getUser() {
+            const userId = document.getElementById('userId').value;
+            const response = await fetch(`/users/${userId}`);
+            const data = await response.json();
+            document.getElementById('userResult').innerHTML = JSON.stringify(data, null, 2);
+        }
+    </script>
+</body>
+</html>
