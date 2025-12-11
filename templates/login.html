@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="../static/css/auth.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <div id="error-message" style="display: none;"></div>
+        <div id="success-message" style="display: none;"></div>
+
+        <form id="login-form">
+            <div>
+                <label>Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label>Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+
+        <p>Don't have an account? <a href="/register">Register</a></p>
+    </div>
+
+    <script src="../static/js/login.js"></script>
+</body>
+</html>

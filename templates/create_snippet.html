@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Snippet</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>➕ Create New Snippet</h1>
+        <a href="/dashboard" class="btn">← Back to Dashboard</a>
+
+        <form id="create-form" class="snippet-form">
+            <div>
+                <label>Title *</label>
+                <input type="text" id="title" required placeholder="e.g., Python Fibonacci function">
+            </div>
+
+            <div>
+                <label>Code *</label>
+                <textarea id="code" rows="10" required placeholder="Paste your code here..."></textarea>
+            </div>
+
+            <div>
+                <label>Description (optional)</label>
+                <textarea id="description" rows="3" placeholder="Add comments or description..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Create Snippet</button>
+        </form>
+
+        <div id="message"></div>
+    </div>
+
+    <script src="/static/js/create_snippet.js"></script>
+</body>
+</html>

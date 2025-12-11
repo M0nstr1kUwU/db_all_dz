@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>👋 Welcome to Dashboard</h1>
+
+        <div class="user-info" id="user-info">
+            Loading...
+        </div>
+
+        <div class="actions">
+            <a href="/snippets" class="btn">Browse All Snippets</a>
+            <a href="/my-snippets" class="btn">My Snippets</a>
+            <a href="/create-snippet" class="btn btn-primary">Create New Snippet</a>
+            <button onclick="logout()" class="btn btn-danger">Logout</button>
+        </div>
+
+        <div class="error" id="error-message"></div>
+    </div>
+
+    <script src="/static/js/dashboard.js"></script>
+</body>
+</html>
